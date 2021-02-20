@@ -1,10 +1,6 @@
 * {
     box-sizing: border-box;
 }
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
 .container {
     width: 100%;
     padding-left: 15px;
@@ -13,7 +9,6 @@ body {
     margin-right: auto;
 }
 .row {
-    display: flex;
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -240,35 +235,53 @@ body {
 }
 
 @media(max-width:767px) {
+    .header {
+        background-color: #1d2126;
+    }
     .header-row {
         flex-wrap: wrap;
+        background-color: #1d2126;
     }
     .logo {
-        margin-bottom: 15px;
+        height: 60px;
+        line-height: 60px;
     }
     .menu {
-        overflow: auto;
+        overflow: scroll;
+        margin-bottom: 20px;
     }
     .col-xs-hidden {
         display: none;
+    }
+    .slider-in-main {
+        padding-top: 140px;
     }
 }
 
 .header {
     background-color: #1d2126;
-    padding: 25px 0;
-    position: sticky;
-    /* z-index: 10; */
+    height: fit-content;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    z-index: 10;
+}
+.header-row {
+    display: flex;
+    flex-direction: row;
 }
 .logo {
-    padding: 5px 0;
+    padding-top: 5px;
 }
 .menu {
     display: flex;
     color: #a4aead;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    margin-top: 25px;
 }
 .submenu {
     padding: 0 12px;
@@ -278,18 +291,18 @@ body {
     line-height: 25px;
 }
 .submenu:hover {
-    border: 2px solid #5a6068;
+    border: 2px solid #a4aead;
     border-radius: 5px;
 }
 .home {
-    color: #23b7a3;
-    border-color: #23b7a3;
+    color: #23b7a4;
+    border-color: #23b7a4;
 }
-
 .form-search {
-    border: 2px solid #3c4147;
+    border: 2px solid #a4aead;
     border-radius: 5px;
     display: flex;
+    margin-top: 25px;
 }
 .input-search-text {
     background-color: transparent;
@@ -321,4 +334,117 @@ body {
 }
 .input-search-button:focus {
     outline: none;
+}
+.slider-in-main {
+    background-image: url(images/slider.png);
+    background-repeat: no-repeat;
+    background-size: 1900px;
+    height: 660px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.slider-text-header {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.slider-text-body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ccd0d7;
+    max-width: 650px;
+    line-height: 26px;
+    padding-bottom: 40px;
+}
+.buttons {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+}
+.buttons:focus {
+    outline: none;
+}
+.view-more {
+    background-color: #23b7a4;
+    border: 2px solid #23b7a4;
+}
+.view-more:hover {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+.video-tour {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+.video-tour:hover {
+    background-color: #23b7a4;
+    border: 2px solid #23b7a4;
+}
+.section1 {
+    border-bottom: 1px solid #dde1e4;
+}
+.we-are-modest {
+    padding: 80px 0;
+}
+.we-are-modest-head {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+    border-left: 10px solid #e1e6ea;
+    padding-left: 15px;
+    margin-bottom: 60px;
+}
+.we-are-modest-body {
+    display: flex;
+}
+.we-are-modest-body-text-left-side {
+    display: flex;
+    flex-direction: column;
+}
+.we-are-modest-body-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #8d8f92;
+    /* width: 653px;
+    height: 235px; */
+}
+.we-are-modest-body-text > p {
+    padding-bottom: 40px;
+}
+.we-are-modest-body-net-icons {
+    display: flex;
+    padding-top: 10px;
+}
+.we-are-modest-body-net-icons > div {
+    width: 60px;
+    height: 60px;
+    background-color: #c8cdd0;
+    margin-right: 1px;
+}
+.we-are-modest-body-net-icons > div:first-child {
+    margin-right: 3px;
+    margin-top: -1px;
+}
+.icon > a > img {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+.we-are-modest-body-net-icons > div:hover {
+    background-color: #d0d5d9;
 }
