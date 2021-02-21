@@ -121,6 +121,13 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .we-are-modest-body-text-left-side {
+        flex-shrink: 1.4;
+    }
+    .meet-the-team-body {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media(min-width:992px) {
@@ -177,6 +184,13 @@
     .col-md-12 {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .we-are-modest-body-text-left-side {
+        flex-shrink: 1.6;
+    }
+    .meet-the-team-body {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -253,10 +267,22 @@
     .col-xs-hidden {
         display: none;
     }
-    .slider-in-main {
-        padding-top: 140px;
+    .we-are-modest-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .we-are-modest-body-text-left-side {
+        margin-bottom: 60px;
+    }
+    .meet-the-team-body {
+        display: flex;
+        flex-direction: column;
     }
 }
+
+
+
+/* Header + menu */
 
 .header {
     background-color: #1d2126;
@@ -264,7 +290,9 @@
     width: 100%;
     height: 80px;
     line-height: 80px;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    left: 0;
     z-index: 10;
 }
 .header-row {
@@ -335,6 +363,11 @@
 .input-search-button:focus {
     outline: none;
 }
+
+
+
+/* Slider */
+
 .slider-in-main {
     background-image: url(images/slider.png);
     background-repeat: no-repeat;
@@ -364,7 +397,7 @@
     padding-bottom: 40px;
 }
 .buttons {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Quattrocento Sans', sans-serif;
     font-size: 14px;
     line-height: 28px;
     font-weight: 700;
@@ -392,11 +425,16 @@
     background-color: #23b7a4;
     border: 2px solid #23b7a4;
 }
+
+
+
+/* We are modest section1 */
+
 .section1 {
     border-bottom: 1px solid #dde1e4;
 }
 .we-are-modest {
-    padding: 80px 0;
+    padding: 80px 0 100px;
 }
 .we-are-modest-head {
     font-family: 'Quattrocento Sans', sans-serif;
@@ -406,7 +444,7 @@
     text-transform: uppercase;
     border-left: 10px solid #e1e6ea;
     padding-left: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 }
 .we-are-modest-body {
     display: flex;
@@ -414,6 +452,8 @@
 .we-are-modest-body-text-left-side {
     display: flex;
     flex-direction: column;
+    flex-shrink: 1.55;
+    margin-right: 30px;
 }
 .we-are-modest-body-text {
     font-family: 'Open Sans', sans-serif;
@@ -421,15 +461,16 @@
     font-weight: 400;
     line-height: 26px;
     color: #8d8f92;
-    /* width: 653px;
-    height: 235px; */
+    padding-bottom: 15px;
 }
 .we-are-modest-body-text > p {
     padding-bottom: 40px;
 }
+.we-are-modest-body-text > p > span {
+    font-weight: 700;
+}
 .we-are-modest-body-net-icons {
     display: flex;
-    padding-top: 10px;
 }
 .we-are-modest-body-net-icons > div {
     width: 60px;
@@ -447,4 +488,102 @@
 }
 .we-are-modest-body-net-icons > div:hover {
     background-color: #d0d5d9;
+    cursor: pointer;
+}
+.we-are-modest-body-main-points {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+.point-with-number1, .point-with-number2, .point-with-number3 {
+    display: flex;
+    padding-bottom: 40px;
+}
+.point-with-number3:last-child {
+    padding-bottom: 0;
+}
+.point-with-number1-square, .point-with-number2-square, .point-with-number3-square {
+    min-width: 50px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #23b7a4;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+.point-with-number1-text > h3, .point-with-number2-text > h3, .point-with-number3-text > h3 {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.point-with-number1-text > p, .point-with-number2-text > p, .point-with-number3-text > p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #8d8f92;
+}
+
+
+
+/* Meet the team - section2 */
+
+.meet-the-team {
+    padding: 80px 0 50px;
+}
+.meet-the-team-head {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+    border-left: 10px solid #e1e6ea;
+    padding-left: 15px;
+    margin-bottom: 65px;
+}
+.meet-the-team-body {
+    display: flex;
+    justify-content: space-between;
+}
+.workers {
+    margin-bottom: 50px;
+    background-color: #e1e6ea;
+}
+.workers:hover {
+    background-color: #3a454d;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.worker-information {
+    padding: 20px;
+}
+.worker-information > h5 {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+}
+.worker-information > h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8d8f92;
+    line-height: 26px;
+}
+
+
+/* Закінчити з hover пізніше */
+
+.social-network-pages {
+    display: none;
+}
+.social-network-pages:hover:active {
+    display: block;
+}
+.social-network-pages > a > img {
+    background-color: #3a454d;
 }
