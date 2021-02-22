@@ -268,14 +268,12 @@
         display: none;
     }
     .we-are-modest-body {
-        display: flex;
         flex-direction: column;
     }
     .we-are-modest-body-text-left-side {
         margin-bottom: 60px;
     }
     .meet-the-team-body {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -283,13 +281,16 @@
         max-width: 263px;
     }
     .lovely-work-body-gallery {
-        display: flex;
         flex-direction: column;
         justify-content: center;
     }
     .gallery-pictures > img {
         max-width: 100%;
         height: 265px;
+    }
+    .what-we-do-body-services {
+        flex-direction: column;
+        margin: 0 auto;
     }
 }
 
@@ -695,4 +696,53 @@
 .show-me-more-button-style:hover {
     background-color: #23b7a4;
     border: 2px solid #23b7a4;
+}
+
+
+
+/* What we do - section4 */
+
+.what-we-do {
+    padding: 80px 0 70px;
+}
+.what-we-do-head {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+    border-left: 10px solid #e1e6ea;
+    padding-left: 15px;
+    margin-bottom: 70px;
+}
+.what-we-do-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.what-we-do-body-services {
+    width: 260px;
+    margin-bottom: 95px;
+    text-align: center;
+}
+.what-we-do-body-services > img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 35px;
+}
+.what-we-do-body-services > h5 {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.what-we-do-body-services > h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #8d8f92;
 }
