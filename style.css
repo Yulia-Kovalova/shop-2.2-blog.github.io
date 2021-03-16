@@ -363,6 +363,10 @@
         transform: translateX(150%);
         transition: all 500ms ease-in-out;
     }
+    .burger-lines-right-side {
+        display: flex;
+        justify-content: flex-end;
+    }
     .hidden-menu {
         opacity: 0;
         visibility: hidden;
@@ -401,7 +405,6 @@
     background-color: #1d2126;
     height: fit-content;
     width: 100%;
-    /* height: 80px; */
     line-height: 80px;
     position: sticky;
     top: 0;
@@ -549,7 +552,7 @@
 .we-are-modest {
     padding: 80px 0 100px;
 }
-.we-are-modest-head {
+.we-are-modest-head, .meet-the-team-head, .what-we-do-head, .stay-in-touch-head {
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 36px;
     font-weight: 700;
@@ -647,16 +650,6 @@
 .meet-the-team {
     padding: 80px 0 50px;
 }
-.meet-the-team-head {
-    font-family: 'Quattrocento Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: #292f36;
-    text-transform: uppercase;
-    border-left: 10px solid #e1e6ea;
-    padding-left: 15px;
-    margin-bottom: 65px;
-}
 .meet-the-team-body {
     display: flex;
     justify-content: space-between;
@@ -727,7 +720,7 @@
 .lovely-work {
     padding: 80px 0 60px;
 }
-.lovely-work-head {
+.lovely-work-head, .features-section-head {
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 36px;
     font-weight: 700;
@@ -804,21 +797,12 @@
 .what-we-do {
     padding: 80px 0 70px;
 }
-.what-we-do-head {
-    font-family: 'Quattrocento Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: #292f36;
-    text-transform: uppercase;
-    border-left: 10px solid #e1e6ea;
-    padding-left: 15px;
-    margin-bottom: 70px;
-}
 .what-we-do-body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 70px;
 }
 .what-we-do-body-services {
     width: 260px;
@@ -856,16 +840,6 @@
 .features-section {
     padding-top: 85px;
 }
-.features-section-head {
-    font-family: 'Quattrocento Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    border-left: 10px solid #4e5a62;
-    padding-left: 15px;
-    margin-bottom: 60px;
-}
 .features-section-body {
     display: flex;
     justify-content: space-between;
@@ -895,20 +869,13 @@
 
 
 
-/* Features - section5 */
+/* Stay in touch - section6 */
 
 .stay-in-touch {
     padding: 64px 0 65px;
 }
-.stay-in-touch-head {
-    font-family: 'Quattrocento Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: #292f36;
-    text-transform: uppercase;
-    border-left: 10px solid #e1e6ea;
-    padding-left: 15px;
-    margin-bottom: 60px;
+.stay-in-touch-body {
+    margin-bottom: 65px;
 }
 .stay-in-touch-body-map {
     margin-bottom: 60px;
@@ -979,10 +946,11 @@
     display: none;
 }
 .modal-block {
-    width: 300px;
-    height: 280px;
+    width: 280px;
+    height: 300px;
     background-color: #ffffff;
-    border: 1px solid grey;
+    border: 2px solid #3a454d;
+    border-radius: 5px;
     padding: 15px;
     margin: 100px auto;
 }
@@ -996,25 +964,28 @@
     text-align: center;
     line-height: 20px;
     align-self: flex-end;
-    background-color: rgb(255, 131, 131);
-    border: 1px solid red;
+    background-color: #3a454d73;
+    border: 1px solid #3a454d;
+    color: #ffffff;
     border-radius: 3px;
     cursor: pointer;
     margin-bottom: 5px;
 }
 .modal-form-text h3 {
-    height: 50px;
-    line-height: 44px;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 50px;
     font-size: 20px;
-    font-weight: bold;
-    color: orangered;
+    color: #ffffff;
     text-align: center;
-    background-color: rgb(212, 255, 212);
-    border: 1px solid rgb(2, 136, 2);
+    background-color: #3a454d73;
+    border: 2px solid #3a454d;
     border-radius: 3px;
     margin-bottom: 5px;
 }
 .modal-form-text p {
+    color: #3a454d;
     font-size: 16px;
     text-align: center;
 }
@@ -1027,19 +998,24 @@
     padding: 5px;
     outline: none;
     border-style: outset;
-    border-color: rgb(2, 136, 2);
+    border: 2px solid #3a454d;
+    color: #3a454d;
     border-radius: 3px;
 }
 .modal-btn {
     width: 100%;
     height: 50px;
     padding: 5px;
-    background-color: rgb(97, 207, 97);
-    color: orangered;
-    font-weight: bolder;
-    font-size: 30px;
-    border: 3px solid rgb(2, 136, 2);
+    background-color: #3a454d73;
+    color: #3a454d;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 34px;
+    font-size: 34px;
+    border: 2px solid #3a454d;
     border-radius: 3px;
+    color: #ffffff;
 }
 .hide {
     display: none;
